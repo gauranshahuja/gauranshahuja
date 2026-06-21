@@ -115,6 +115,32 @@ A desktop voice assistant with **fully offline** speech recognition (Vosk) in bo
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ⚡ ScraperPro
+**Live Web-Scraping SaaS (Backend)**
+
+The Node.js + Express backend behind a **live, monetized SaaS** — Razorpay payments (orders, verification, webhooks), a scrape-job pipeline, OpenAI-powered listing generation with a credit system, an AI Listing Agent, and a server-verified owner admin API. Deployed on Google Cloud Run.
+
+`Node` `Express` `Razorpay` `OpenAI` `Cloud Run`
+
+[📦 Repo](https://github.com/gauranshahuja/scraperpro) · [🌐 Live](https://scraperpro.online)
+
+</td>
+<td width="50%" valign="top">
+
+#### 🧠 LeetCode
+**Data Structures & Algorithms**
+
+Sharpening problem-solving daily — my solutions in C / C++ / Python, organized by topic and growing.
+
+`C` `C++` `Python` `DSA`
+
+[📦 Repo](https://github.com/gauranshahuja/leetcode-s_solutions) · [🔗 Profile](https://leetcode.com/u/GauranshAhuja/)
+
+</td>
+</tr>
 </table>
 
 > 🔭 More projects in active development — this list keeps growing.
