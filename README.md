@@ -73,7 +73,7 @@ Each company gets an isolated workspace with invite-based onboarding via role-sc
 
 `React` `Node` `Express` `MongoDB` `JWT` `Firebase`
 
-[🌐 Live Demo](https://projecthub-client.web.app)
+[🌐 Live Demo](https://projecthub-client.web.app) · [📦 Repo](https://github.com/gauranshahuja/project-management-tool)
 
 </td>
 <td width="50%" valign="top">
