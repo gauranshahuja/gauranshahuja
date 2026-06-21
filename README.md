@@ -133,6 +133,14 @@ Sharpening problem-solving daily — my solutions, organized and growing.
 
 </div>
 
+### 🧠 LeetCode
+
+<div align="center">
+
+[![LeetCode Stats](https://leetcard.jacoblin.cool/GauranshAhuja?theme=dark&font=Fira%20Code&ext=heatmap)](https://leetcode.com/u/GauranshAhuja/)
+
+</div>
+
 ---
 
 <div align="center">
