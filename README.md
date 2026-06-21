@@ -73,45 +73,45 @@ Each company gets an isolated workspace with invite-based onboarding via role-sc
 
 `React` `Node` `Express` `MongoDB` `JWT` `Firebase`
 
-[🌐 Live Demo](https://managementtool.netlify.app)
+[🌐 Live Demo](https://projecthub-client.web.app)
 
 </td>
 <td width="50%" valign="top">
 
-#### 🧩 Catalog Engine
-**AI-Powered Shopify & Amazon Pipeline**
+#### 🛍️ Shopify Listing AI
+**AI-Powered Shopify Listing Generator**
 
-Scrapes Shopify and Amazon product data and outputs ready-to-import CSVs, enriching each product with **Gemini-generated** SEO copy, image alt text, and taxonomy-validated categories. Includes a human review-gate, full run history, and admin-invite-only auth. Deployed on Google Cloud Run.
+Scrapes Shopify and Amazon product data and outputs ready-to-import CSVs, enriching each product with **Gemini-generated** SEO copy, image alt text, and taxonomy-validated categories. Includes a human review-gate, full run history, browser scraper extensions, and admin-invite-only auth. Deployed on Google Cloud Run.
 
 `Node` `Express` `SQLite` `Gemini` `Cloud Run`
 
-[📦 Repo](https://github.com/gauranshahuja/catalog-engine)
+[📦 Repo](https://github.com/gauranshahuja/shopify-listing-ai)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-#### 🤖 Jarvis
-**Offline Voice Assistant (English + Hindi)**
+#### 📦 StockFlow
+**Multi-Warehouse Inventory & Order Control**
 
-A desktop voice assistant with **fully offline** speech recognition (Vosk) in both English and Hindi — 24 voice skills, optional AI conversation, face/voice biometric auth, and a sci-fi holographic HUD. No cloud dependency for the core experience.
+A web-based inventory + order-processing system with batch/expiry control, **FEFO dispatch**, barcode + GS1 2D scanning with OCR, warehouse transfers, returns, analytics, and live Google Sheets sync. Role- and location-scoped Firestore security rules. Includes 3D warehouse visualizations with Three.js.
 
-`Python` `Vosk` `OpenCV`
+`React` `Firebase` `Firestore` `Three.js` `ZXing`
 
-[📦 Repo](https://github.com/gauranshahuja/jarvis)
+[📦 Repo](https://github.com/gauranshahuja/stockflow)
 
 </td>
 <td width="50%" valign="top">
 
-#### 🧠 LeetCode
-**Data Structures & Algorithms**
+#### 🤖 Jarvis
+**Offline Voice Assistant (English + Hindi)**
 
-Sharpening problem-solving daily — my solutions, organized and growing.
+A desktop voice assistant with **fully offline** speech recognition (Vosk) in both English and Hindi — 24 voice skills, optional AI conversation, face/voice biometric auth, hand & eye tracking, Doctor-Strange-style gesture magic, and a sci-fi holographic HUD.
 
-`C` `Problem Solving`
+`Python` `Vosk` `OpenCV`
 
-[📦 Repo](https://github.com/gauranshahuja/leetcode-s_solutions) · [🔗 Profile](https://leetcode.com/u/GauranshAhuja/)
+[📦 Repo](https://github.com/gauranshahuja/jarvis)
 
 </td>
 </tr>
