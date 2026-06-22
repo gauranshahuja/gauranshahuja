@@ -12,10 +12,12 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
     steps:
       - name: Update README with recent activity
         uses: jamesgeorge007/github-activity-readme@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_MSG: "chore: update recent activity"
           MAX_LINES: 5
