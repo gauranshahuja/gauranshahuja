@@ -1,0 +1,21 @@
+name: Update Profile Activity
+
+on:
+  schedule:
+    # Runs once a day at 00:30 UTC
+    - cron: "30 0 * * *"
+  workflow_dispatch:        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update README with recent activity
+        uses: jamesgeorge007/github-activity-readme@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMIT_MSG: "chore: update recent activity"
+          MAX_LINES: 5

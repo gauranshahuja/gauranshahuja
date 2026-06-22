@@ -169,6 +169,13 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 
 ---
 
+### ⚡ Recent Activity
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
+---
+
 <div align="center">
 
 ### 💬 Let’s connect
