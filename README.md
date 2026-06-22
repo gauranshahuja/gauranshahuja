@@ -172,6 +172,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
+🚀 Actively shipping — see the pinned projects above and my [public repositories](https://github.com/gauranshahuja?tab=repositories).
 <!--END_SECTION:activity-->
 
 ---
