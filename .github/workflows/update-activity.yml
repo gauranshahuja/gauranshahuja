@@ -16,6 +16,9 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Update README with recent activity
         uses: jamesgeorge007/github-activity-readme@master
         with:
