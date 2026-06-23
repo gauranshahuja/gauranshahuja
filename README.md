@@ -6,7 +6,7 @@
 <p>
   <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://leetcode.com/u/GauranshAhuja/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
-  <a href="https://managementtool.netlify.app"><img src="https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo"/></a>
+  <a href="https://projecthub-client.web.app/"><img src="https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo"/></a>
   <a href="mailto:gauransh3637ahuja@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
