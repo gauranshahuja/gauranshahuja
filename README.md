@@ -163,7 +163,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=gauranshahuja&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
 
-![GitHub Streak](https://streak-stats.demolab.com?user=gauranshahuja&theme=tokyonight&hide_border=true&cache_bust=20260623)
+![GitHub Streak](https://streak-stats.demolab.com?user=gauranshahuja&theme=tokyonight&hide_border=true)
 
 </div>
 
