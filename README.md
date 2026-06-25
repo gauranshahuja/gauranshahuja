@@ -6,7 +6,7 @@
 <p>
   <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://leetcode.com/u/GauranshAhuja/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
-  <a href="https://projecthub-client.web.app/"><img src="https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo"/></a>
+  <a href="https://gauranshportfolio.web.app"><img src="https://img.shields.io/badge/Portfolio-FF7531?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/></a>
   <a href="mailto:gauransh3637ahuja@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
@@ -21,14 +21,22 @@ const gauransh = {
   role: "Full-Stack Developer @ Nova Web Innovations",
   stack: ["React", "Node.js", "Express", "MongoDB", "Firebase"],
   cloud: ["Google Cloud Run", "Docker", "GitHub Actions"],
-  ai: ["Google Gemini", "OpenAI"],
-  focus: "shipping production SaaS, AI data pipelines & real tools",
-  education: "BCA ✓  ·  MCA (in progress)",
+  ai: ["Google Gemini", "OpenAI", "Vosk (offline)"],
+  builds: ["multi-tenant SaaS", "AI cataloging pipelines",
+           "inventory systems", "offline voice AI"],
+  education: "BCA ✓  ·  MCA — AI/ML (in progress)",
   location: "Haridwar, India 🇮🇳",
 };
 ```
 
-I’m a full-stack (MERN) developer who **builds and ships real, deployed products** — multi-tenant SaaS, AI-powered data pipelines, and developer tools running on **Google Cloud Run** and **Firebase**. I care about clean REST APIs, solid auth & role-based access control, and code that actually makes it to production.
+I’m a full-stack (MERN) developer who **builds and ships real, deployed products**. My repos aren’t demos — they’re live systems people use:
+
+- 🧩 **Multi-tenant SaaS** with server-side RBAC, JWT + social login and real-time collaboration
+- 🤖 **AI-powered pipelines** that scrape products and auto-generate SEO catalogs (Gemini / OpenAI)
+- 📦 **Multi-warehouse inventory** with batch/expiry control, barcode scanning and 3D visualization
+- 🎙️ A **fully offline voice assistant** (English + Hindi) with biometric auth and a sci-fi HUD
+
+I care about clean REST APIs, solid auth & role-based access control, and code that actually makes it to production — on **Google Cloud Run** and **Firebase**.
 
 ---
 
@@ -183,6 +191,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 
 I’m open to **full-stack / software engineering opportunities**. Building things that ship.
 
+<a href="https://gauranshportfolio.web.app"><img src="https://img.shields.io/badge/Portfolio-FF7531?style=for-the-badge&logo=firefox&logoColor=white"/></a>
 <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="https://leetcode.com/u/GauranshAhuja/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a>
 <a href="mailto:gauransh3637ahuja@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
