@@ -93,7 +93,7 @@ Scrapes Shopify and Amazon product data and outputs ready-to-import CSVs, enrich
 
 `Node` `Express` `SQLite` `Gemini` `Cloud Run`
 
-[📦 Repo](https://github.com/gauranshahuja/shopify-listing-ai)
+[🌐 Live](https://listify-engine.web.app) · [📦 Repo](https://github.com/gauranshahuja/shopify-listing-ai)
 
 </td>
 </tr>
@@ -107,7 +107,7 @@ A web-based inventory + order-processing system with batch/expiry control, **FEF
 
 `React` `Firebase` `Firestore` `Three.js` `ZXing`
 
-[📦 Repo](https://github.com/gauranshahuja/stockflow)
+[🌐 Live Demo](https://stockflow-hub.web.app) · [📦 Repo](https://github.com/gauranshahuja/stockflow)
 
 </td>
 <td width="50%" valign="top">
