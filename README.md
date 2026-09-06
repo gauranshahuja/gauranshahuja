@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-🚀 Actively shipping — see the pinned projects above and my [public repositories](https://github.com/gauranshahuja?tab=repositories).
+1. 💪 Opened PR [#11042](https://github.com/firebase/firebase-tools/pull/11042) in [firebase/firebase-tools](https://github.com/firebase/firebase-tools)
 <!--END_SECTION:activity-->
 
 ---
