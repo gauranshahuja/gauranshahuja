@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#9117](https://github.com/facebook/docusaurus/issues/9117#issuecomment-5607293101) in [facebook/docusaurus](https://github.com/facebook/docusaurus)
+1. 🗣 Commented on [#12431](https://github.com/facebook/docusaurus/pull/12431#issuecomment-5614474513) in [facebook/docusaurus](https://github.com/facebook/docusaurus)
 <!--END_SECTION:activity-->
 
 ---
