@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#13590](https://github.com/internetarchive/openlibrary/pull/13590) in [internetarchive/openlibrary](https://github.com/internetarchive/openlibrary)
+1. 🗣 Commented on [#794](https://github.com/sugarlabs/musicblocks-v4/issues/794#issuecomment-5648285890) in [sugarlabs/musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)
 <!--END_SECTION:activity-->
 
 ---
