@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#13412](https://github.com/internetarchive/openlibrary/issues/13412#issuecomment-5830377163) in [internetarchive/openlibrary](https://github.com/internetarchive/openlibrary)
+1. 🗣 Commented on [#16649](https://github.com/laurent22/joplin/issues/16649#issuecomment-5859529948) in [laurent22/joplin](https://github.com/laurent22/joplin)
 <!--END_SECTION:activity-->
 
 ---
