@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#1441](https://github.com/kubeflow/notebooks/pull/1441) in [kubeflow/notebooks](https://github.com/kubeflow/notebooks)
+1. 💪 Opened PR [#2113](https://github.com/eclipse-sw360/sw360-frontend/pull/2113) in [eclipse-sw360/sw360-frontend](https://github.com/eclipse-sw360/sw360-frontend)
 <!--END_SECTION:activity-->
 
 ---
