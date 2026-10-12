@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#18449](https://github.com/bazelbuild/bazel/issues/18449#issuecomment-6101686442) in [bazelbuild/bazel](https://github.com/bazelbuild/bazel)
+1. 🗣 Commented on [#10633](https://github.com/internetarchive/openlibrary/issues/10633#issuecomment-6110154016) in [internetarchive/openlibrary](https://github.com/internetarchive/openlibrary)
 <!--END_SECTION:activity-->
 
 ---
