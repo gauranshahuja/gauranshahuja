@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#13732](https://github.com/internetarchive/openlibrary/pull/13732) in [internetarchive/openlibrary](https://github.com/internetarchive/openlibrary)
+1. 🗣 Commented on [#38810](https://github.com/aws/aws-cdk/pull/38810#issuecomment-6231771254) in [aws/aws-cdk](https://github.com/aws/aws-cdk)
 <!--END_SECTION:activity-->
 
 ---
