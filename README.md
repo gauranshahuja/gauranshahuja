@@ -180,7 +180,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#2113](https://github.com/eclipse-sw360/sw360-frontend/pull/2113) in [eclipse-sw360/sw360-frontend](https://github.com/eclipse-sw360/sw360-frontend)
+1. 🗣 Commented on [#923](https://github.com/sugarlabs/musicblocks-v4/pull/923#issuecomment-6547252127) in [sugarlabs/musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)
 <!--END_SECTION:activity-->
 
 ---
