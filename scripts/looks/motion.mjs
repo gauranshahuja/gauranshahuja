@@ -410,12 +410,26 @@ export function createMotion({ cfg, esc, n2, rng, repoInfo, boardDate }) {
     // numbers
     const active = days.filter((d) => d.count > 0).length;
     const best = days.reduce((a, b) => (b.count > a.count ? b : a), days[0]);
-    let streak = 0;
+    // longest streak, with the days it ran from and to
+    let run = 0;
     let longest = 0;
-    for (const d of days) {
-      streak = d.count > 0 ? streak + 1 : 0;
-      longest = Math.max(longest, streak);
-    }
+    let longestEnd = -1;
+    days.forEach((d, i) => {
+      run = d.count > 0 ? run + 1 : 0;
+      if (run > longest) {
+        longest = run;
+        longestEnd = i;
+      }
+    });
+    const longestStart = longestEnd - longest + 1;
+    // current streak: back from today, or from yesterday while today is still empty
+    let last = days.length - 1;
+    if (days[last].count === 0) last--;
+    let current = 0;
+    for (let i = last; i >= 0 && days[i].count > 0; i--) current++;
+    const SHOW_CURRENT_FROM = 3;
+    const short = (iso) => boardDate(iso).replace(/^0/, '');
+    const plural = (n) => (n === 1 ? 'DAY' : 'DAYS');
     const total = c.total.toLocaleString('en-US');
 
     // odometer
@@ -442,22 +456,25 @@ export function createMotion({ cfg, esc, n2, rng, repoInfo, boardDate }) {
     }
 
     // stats
-    // each fact: value, label line, second line, whether the second line is highlighted
+    // each fact: value, unit beside the value, label line, second line, whether the second line is highlighted
     const facts = [
-      [String(active), 'ACTIVE', 'DAYS', false],
-      [String(longest), 'LONGEST', 'STREAK, DAYS', false],
-      [String(best.count), 'BEST DAY', boardDate(best.date), true],
-      [String(c.prs), 'PRS', 'OPENED', false],
+      [String(active), '', 'ACTIVE', 'DAYS', false],
+      [String(longest), plural(longest), 'BEST STREAK', longest ? `${short(days[longestStart].date)}–${short(days[longestEnd].date)}` : '', true],
+      // a streak of a day or two says nothing, so the live counter only appears once it is worth reading
+      ...(current >= SHOW_CURRENT_FROM ? [[String(current), plural(current), 'CURRENT', 'STREAK', false]] : []),
+      [String(best.count), '', 'BEST DAY', short(best.date), true],
+      [String(c.prs), '', 'PRS', 'OPENED', false],
     ];
-    const fx0 = Math.max(x + 40, 320);
+    const fx0 = Math.max(x + 34, 312);
     const fw = (W - M - fx0) / facts.length;
     let stats = '';
-    facts.forEach(([value, line1, line2, hot], i) => {
+    facts.forEach(([value, unit, line1, line2, hot], i) => {
       const fx = fx0 + i * fw;
       stats += `<rect x="${n2(fx)}" y="70" width="2" height="72" fill="${K.line}"/>`;
-      stats += `<text class="val" x="${n2(fx + 14)}" y="100">${esc(value)}</text>`;
-      stats += `<text class="lbl" x="${n2(fx + 14)}" y="121">${esc(line1)}</text>`;
-      stats += `<text class="lbl${hot ? ' lime' : ''}" x="${n2(fx + 14)}" y="137">${esc(line2)}</text>`;
+      stats += `<text class="val" x="${n2(fx + 13)}" y="100">${esc(value)}</text>`;
+      if (unit) stats += `<text class="sl" x="${n2(fx + 13 + layout(value, 30).width + 6)}" y="100">${unit}</text>`;
+      stats += `<text class="sl" x="${n2(fx + 13)}" y="121">${esc(line1)}</text>`;
+      stats += `<text class="sl${hot ? ' lime' : ''}" x="${n2(fx + 13)}" y="137">${esc(line2)}</text>`;
     });
 
     // heatmap: one path per level
@@ -496,6 +513,14 @@ export function createMotion({ cfg, esc, n2, rng, repoInfo, boardDate }) {
     if (bestXY) {
       scan += `<rect class="blink" x="${n2(bestXY[0] - 2.5)}" y="${bestXY[1] - 2.5}" width="${CELL + 5}" height="${CELL + 5}" fill="none" stroke="${K.ink}" stroke-width="1.5"/>`;
     }
+    // bracket under the weeks the best streak ran through
+    if (longest) {
+      const colOf = (i) => Math.floor((i + first) / 7);
+      const bx0 = gx + colOf(longestStart) * PITCH;
+      const bx1 = gx + colOf(longestEnd) * PITCH + CELL;
+      const by = gy + 7 * PITCH - (PITCH - CELL) + 4;
+      scan += `<path d="M${n2(bx0)},${by - 3}v3H${n2(bx1)}v-3" fill="none" stroke="${K.lime}" stroke-width="1.5"/>`;
+    }
 
     // legend
     const ly = gy + 7 * PITCH + 12;
@@ -509,6 +534,7 @@ export function createMotion({ cfg, esc, n2, rng, repoInfo, boardDate }) {
     const css =
       `.num{font:700 ${F}px ${FONT};fill:${K.ink};text-anchor:middle}.val{font:700 30px ${FONT};fill:${K.ink}}` +
       `.hd{font:700 13px ${FONT};letter-spacing:4.5px;fill:${K.ink}}` +
+      `.sl{font:600 10px ${MONO};letter-spacing:1.4px;fill:${K.mute}}.sl.lime{fill:${K.lime}}` +
       `.od{transform:translateY(var(--y));animation:od ${SWEEP}s cubic-bezier(.16,1,.3,1) var(--d,0s) infinite}` +
       `@keyframes od{0%{transform:translateY(0)}30%{transform:translateY(var(--y))}100%{transform:translateY(var(--y))}}` +
       `.fl{fill:${K.ink};opacity:0;animation:fl ${SWEEP}s linear var(--d,0s) infinite}@keyframes fl{0%{opacity:.5}7%{opacity:0}100%{opacity:0}}` +
@@ -521,7 +547,7 @@ export function createMotion({ cfg, esc, n2, rng, repoInfo, boardDate }) {
       `<rect x="${M}" y="51.5" width="${W - 2 * M}" height="1" fill="${K.line}"/>` +
       num + stats + grid + scan + legend;
 
-    const title = `${total} contributions in the last 12 months: ${active} active days, longest streak ${longest} days, busiest day ${best.count} on ${boardDate(best.date)} ${best.date.slice(0, 4)}, ${c.prs} pull requests opened.`;
+    const title = `${total} contributions in the last 12 months: ${active} active days, longest streak ${longest} days (${longest ? `${short(days[longestStart].date)} to ${short(days[longestEnd].date)}` : 'none'})${current >= SHOW_CURRENT_FROM ? `, current streak ${current} days` : ''}, busiest day ${best.count} on ${boardDate(best.date)} ${best.date.slice(0, 4)}, ${c.prs} pull requests opened.`;
     return { svg: doc(W, H, title, css, defs, body), title };
   }
 
