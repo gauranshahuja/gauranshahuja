@@ -118,6 +118,115 @@ async function fetchContrib() {
   };
 }
 
+/**
+ * What each square of the calendar was made of: commit headlines per repository, plus the pull requests,
+ * issues and reviews of that day. A commit is dated in the time zone of its own timestamp, which is how
+ * GitHub places it on the calendar; PRs, issues and reviews are dated in UTC. Private repositories are
+ * never named here: their work only shows up in the day's count.
+ */
+async function fetchDayLog() {
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (!token) throw new Error('no GITHUB_TOKEN / GH_TOKEN set');
+  const gql = async (query, variables) => {
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', 'User-Agent': 'profile-board' },
+      body: JSON.stringify({ query, variables }),
+    });
+    const json = await res.json();
+    if (!res.ok || json.errors) throw new Error(`GraphQL ${res.status}: ${JSON.stringify(json.errors ?? json).slice(0, 200)}`);
+    return json.data;
+  };
+  const repo = '{nameWithOwner isPrivate}';
+  const top = await gql(
+    'query($login:String!){user(login:$login){id contributionsCollection{startedAt endedAt ' +
+      `commitContributionsByRepository(maxRepositories:100){repository${repo}} ` +
+      `pullRequestContributions(first:100){nodes{occurredAt pullRequest{title number repository${repo}}}} ` +
+      `issueContributions(first:100){nodes{occurredAt issue{title number repository${repo}}}} ` +
+      `pullRequestReviewContributions(first:100){nodes{occurredAt pullRequest{title number repository${repo}}}}}}}`,
+    { login: cfg.user },
+  );
+  const { id, contributionsCollection: c } = top.user;
+  const log = {};
+  const day = (date) => (log[date] ??= { commits: {}, events: [] });
+
+  for (const { repository: r } of c.commitContributionsByRepository) {
+    if (r.isPrivate) continue;
+    const [owner, name] = r.nameWithOwner.split('/');
+    let after = null;
+    do {
+      const d = await gql(
+        'query($owner:String!,$name:String!,$id:ID!,$since:GitTimestamp!,$until:GitTimestamp!,$after:String){' +
+          'repository(owner:$owner,name:$name){defaultBranchRef{target{... on Commit{' +
+          'history(first:100,after:$after,author:{id:$id},since:$since,until:$until){' +
+          'pageInfo{hasNextPage endCursor} nodes{authoredDate messageHeadline}}}}}}}',
+        { owner, name, id, since: c.startedAt, until: c.endedAt, after },
+      );
+      const history = d.repository?.defaultBranchRef?.target?.history;
+      if (!history) break;
+      // authoredDate keeps the commit's own offset, so its first ten characters are the calendar day
+      for (const n of history.nodes) (day(n.authoredDate.slice(0, 10)).commits[r.nameWithOwner] ??= []).unshift(n.messageHeadline);
+      after = history.pageInfo.hasNextPage ? history.pageInfo.endCursor : null;
+    } while (after);
+  }
+
+  const events = [
+    ...c.pullRequestContributions.nodes.map((n) => [n, n.pullRequest, 'opened PR']),
+    ...c.issueContributions.nodes.map((n) => [n, n.issue, 'opened issue']),
+    ...c.pullRequestReviewContributions.nodes.map((n) => [n, n.pullRequest, 'reviewed PR']),
+  ];
+  for (const [n, item, verb] of events.sort((a, b) => a[0].occurredAt.localeCompare(b[0].occurredAt))) {
+    if (item.repository.isPrivate) continue;
+    day(n.occurredAt.slice(0, 10)).events.push(`${verb} ${item.repository.nameWithOwner}#${item.number}: ${item.title}`);
+  }
+  return Object.fromEntries(Object.keys(log).sort().map((k) => [k, log[k]]));
+}
+
+/** daylog.json keeps one day per line as well. */
+const dayLogJson = (log) =>
+  `{\n${Object.entries(log).map(([k, v]) => `${JSON.stringify(k)}:${JSON.stringify(v)}`).join(',\n')}\n}\n`;
+
+const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+/** The "Day by day" block under the chart: one collapsible month per section, newest first. */
+function dayLogMarkdown(days, log) {
+  const active = days.filter((d) => d.count > 0);
+  if (!active.length) return '';
+  const cell = (s) => String(s).replace(/\|/g, '\\|').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\s+/g, ' ').trim();
+  const repoLabel = (r) => (r.startsWith(`${cfg.user}/`) ? r.slice(cfg.user.length + 1) : r);
+  const months = new Map();
+  for (const d of active) {
+    const key = d.date.slice(0, 7);
+    if (!months.has(key)) months.set(key, []);
+    months.get(key).push(d);
+  }
+  const sections = [...months.entries()].reverse().map(([key, list], i) => {
+    const [y, m] = key.split('-').map(Number);
+    const total = list.reduce((s, d) => s + d.count, 0);
+    const rows = list
+      .slice()
+      .reverse()
+      .map((d) => {
+        const entry = log[d.date];
+        const parts = [];
+        for (const [r, heads] of Object.entries(entry?.commits ?? {})) {
+          const more = heads.length > 3 ? ` (+${heads.length - 3} more)` : '';
+          parts.push(`**${cell(repoLabel(r))}**: ${heads.slice(0, 3).map(cell).join('; ')}${more}`);
+        }
+        for (const e of entry?.events ?? []) parts.push(cell(e));
+        const date = new Date(`${d.date}T00:00:00Z`);
+        const label = `${WEEKDAYS[date.getUTCDay()]} ${date.getUTCDate()} ${MONTH_NAMES[m - 1].slice(0, 3)}`;
+        return `| ${label} | ${d.count} | ${parts.length ? parts.join('<br>') : 'no public details'} |`;
+      });
+    return (
+      `<details${i === 0 ? ' open' : ''}>\n<summary>${MONTH_NAMES[m - 1]} ${y} · ${list.length} active days · ${total} contributions</summary>\n\n` +
+      `| Day | Count | What |\n|---|--:|---|\n${rows.join('\n')}\n\n</details>`
+    );
+  });
+  return `<details>\n<summary><b>Day by day</b>: what each square on the chart was</summary>\n<br>\n\n${sections.join('\n\n')}\n\n</details>`;
+}
+
 /** contrib.json keeps one day per line, so the daily diff is readable. */
 const contribJson = (c) => {
   const { days, ...totals } = c;
@@ -739,6 +848,23 @@ if (!contrib) {
   } catch {}
 }
 
+const DAYLOG = join(ROOT, 'data', 'daylog.json');
+let dayLog = null;
+if (!OFFLINE) {
+  try {
+    dayLog = await fetchDayLog();
+  } catch (err) {
+    console.warn(`::warning::Day-by-day log not refreshed, using cached data: ${err.message}`);
+  }
+}
+if (!dayLog) {
+  try {
+    dayLog = JSON.parse(await readFile(DAYLOG, 'utf8'));
+  } catch {
+    dayLog = {};
+  }
+}
+
 const hero = buildHero(stats);
 const arrivals = buildArrivals(prs, stats);
 const ticker = buildTicker(prs, stats);
@@ -786,7 +912,10 @@ motionMd = replaceBlock(motionMd, 'switch', switchBlock('motion'));
 motionMd = replaceBlock(motionMd, 'hero', image('m-hero.svg', mHero.title));
 motionMd = replaceBlock(motionMd, 'summary', summaryLine);
 motionMd = replaceBlock(motionMd, 'log', `${image('m-log.svg', `${mLog.title} The full list is below.`)}\n\n${prListMarkdown(prs, stats)}`);
-if (mContrib) motionMd = replaceBlock(motionMd, 'contrib', image('m-contrib.svg', mContrib.title));
+if (mContrib) {
+  const dayByDay = dayLogMarkdown(contrib.days, dayLog);
+  motionMd = replaceBlock(motionMd, 'contrib', `${image('m-contrib.svg', mContrib.title)}${dayByDay ? `\n\n${dayByDay}` : ''}`);
+}
 
 // BOARD.md
 let readme = await readFile(join(ROOT, VERSIONS.board), 'utf8');
@@ -801,6 +930,25 @@ readme = replaceBlock(
 
 const classic = replaceBlock(await readFile(join(ROOT, VERSIONS.classic), 'utf8'), 'switch', switchBlock('classic'));
 const configText = await readFile(join(ROOT, 'board.config.json'), 'utf8');
+
+/**
+ * README.md is the active version, with the other two folded in at the top. A profile README runs no
+ * script or style, so a real tab switch is impossible; <details> is the one thing GitHub lets open in place.
+ * The summaries are text, not the switch images: GitHub wraps an image in a link to the image file, and a
+ * click on it would open that file instead of the section.
+ */
+function inlineSwitch(contents) {
+  const label = { motion: 'MOTION', board: 'BOARD', classic: 'CLASSIC' };
+  const others = Object.keys(VERSIONS).filter((v) => v !== active);
+  const folded = others.map(
+    (v) =>
+      `<details>\n<summary><kbd>${label[v]}</kbd> view · click to open it here</summary>\n<br>\n\n` +
+      `${replaceBlock(contents[v], 'switch', '').replace(/<!-- board:switch:start -->\s*<!-- board:switch:end -->\s*/, '').trim()}\n\n</details>`,
+  );
+  return `<p align="right">Showing <kbd>${label[active]}</kbd> · two more looks:</p>\n\n${folded.join('\n\n')}`;
+}
+const contents = { motion: motionMd, board: readme, classic };
+const profileReadme = replaceBlock(contents[active], 'switch', inlineSwitch(contents));
 
 const files = [
   [DATA, JSON.stringify({ prs }, null, 2) + '\n'],
@@ -825,7 +973,8 @@ const files = [
   [join(ROOT, VERSIONS.motion), motionMd],
   [join(ROOT, VERSIONS.board), readme],
   [join(ROOT, VERSIONS.classic), classic],
-  [join(ROOT, 'README.md'), { motion: motionMd, board: readme, classic }[active]],
+  [DAYLOG, dayLogJson(dayLog)],
+  [join(ROOT, 'README.md'), profileReadme],
   [join(ROOT, 'board.config.json'), configText.replace(/"active":\s*"[^"]*"/,`"active": "${active}"`)],
 ];
 let changed = 0;
