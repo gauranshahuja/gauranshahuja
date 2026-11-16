@@ -1,7 +1,7 @@
 name: Profile
 
 # Rebuilds the boards from the GitHub API every day.
-# To switch the profile between the two versions: Actions -> Profile -> Run workflow -> pick a version.
+# To switch the profile between its versions (motion, board, classic): Actions -> Profile -> Run workflow -> pick a version.
 
 on:
   schedule:
@@ -15,6 +15,7 @@ on:
         default: keep current
         options:
           - keep current
+          - motion
           - board
           - classic
   push:
@@ -22,6 +23,7 @@ on:
     paths:
       - "scripts/**"
       - "board.config.json"
+      - "MOTION.md"
       - "BOARD.md"
       - "CLASSIC.md"
 
@@ -39,7 +41,9 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Refresh "Recent Activity" in the classic version
-        uses: jamesgeorge007/github-activity-readme@master
+        # Third-party action that receives the write token: pinned to a full commit SHA
+        # (v0.5.0), so a later change to its master branch cannot run here unreviewed.
+        uses: jamesgeorge007/github-activity-readme@4aefbfa1c222d70537dc6a02f0519266aab2b1ea # v0.5.0
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,7 +59,7 @@ jobs:
           VERSION: ${{ inputs.version }}
         run: |
           case "$VERSION" in
-            board|classic) node scripts/build-board.mjs --use "$VERSION" ;;
+            motion|board|classic) node scripts/build-board.mjs --use "$VERSION" ;;
             *) node scripts/build-board.mjs ;;
           esac
 

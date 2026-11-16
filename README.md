@@ -1,15 +1,15 @@
 <!-- board:switch:start -->
-<p align="right"><a href="https://github.com/gauranshahuja"><img src="assets/switch-board-on.svg" height="30" alt="Board view (showing now)"></a> <a href="https://github.com/gauranshahuja/gauranshahuja/blob/main/CLASSIC.md"><img src="assets/switch-classic-off.svg" height="30" alt="Classic view"></a></p>
+<p align="right"><a href="https://github.com/gauranshahuja"><img src="assets/switch-motion-on.svg" height="30" alt="Motion view (showing now)"></a> <a href="https://github.com/gauranshahuja/gauranshahuja/blob/main/BOARD.md"><img src="assets/switch-board-off.svg" height="30" alt="Board view"></a> <a href="https://github.com/gauranshahuja/gauranshahuja/blob/main/CLASSIC.md"><img src="assets/switch-classic-off.svg" height="30" alt="Classic view"></a></p>
 <!-- board:switch:end -->
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 14 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
+<p align="center"><img src="assets/m-hero.svg" width="100%" alt="GAURANSH AHUJA. I BUILD SOFTWARE THAT SHIPS. 14 PRS MERGED UPSTREAM. OPEN TO SOFTWARE ROLES. 14 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
-  <a href="https://gauranshportfolio.web.app"><img src="assets/link-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
-  <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="assets/link-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
-  <a href="mailto:gauransh3637ahuja@gmail.com"><img src="assets/link-email.svg" height="40" alt="Email"></a>
+  <a href="https://gauranshportfolio.web.app"><img src="assets/m-link-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
+  <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="assets/m-link-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
+  <a href="mailto:gauransh3637ahuja@gmail.com"><img src="assets/m-link-email.svg" height="40" alt="Email"></a>
 </p>
 
 <!-- board:summary:start -->
@@ -18,12 +18,12 @@
 
 Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Google Cloud Run and Firebase. MCA (AI & ML), Manipal University Jaipur, expected 2027. Based in Haridwar, India.
 
-<p align="center"><img src="assets/ticker.svg" width="100%" alt=""></p>
+<p align="center"><img src="assets/m-orgs.svg" width="100%" alt=""></p>
 
-## Arrivals: code merged upstream
+## Merged upstream
 
-<!-- board:arrivals:start -->
-<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 14 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
+<!-- board:log:start -->
+<p align="center"><img src="assets/m-log.svg" width="100%" alt="Merge log: 14 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
 
 <details>
 <summary><b>All 14 merged pull requests</b>, with links · 7 more in review</summary>
@@ -72,7 +72,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 - [meta/docusaurus #12431](https://github.com/meta/docusaurus/pull/12431) feat(core): resolve Markdown file links across plugins (AI-assisted)
 
 </details>
-<!-- board:arrivals:end -->
+<!-- board:log:end -->
 
 Selected work:
 
@@ -81,7 +81,13 @@ Selected work:
 - **Open Library (Internet Archive)** · 7 merged. [Replaced 28 deprecated `utcnow()` / `utcfromtimestamp()` calls across 16 files](https://github.com/internetarchive/openlibrary/pull/14243) and enabled ruff DTZ003/DTZ004 to keep them out. [Numbered pager on admin edit history](https://github.com/internetarchive/openlibrary/pull/13731) that keeps the page after a revert. Four template partials migrated to Jinja.
 - **Music Blocks v4 (Sugar Labs)** · [Pan the canvas by dragging the background](https://github.com/sugarlabs/musicblocks-v4/pull/821), and [tower extent measurement](https://github.com/sugarlabs/musicblocks-v4/pull/906) for the workspace layout.
 
-## Departures: products shipped
+## Contributions
+
+<!-- board:contrib:start -->
+<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,045 contributions in the last 12 months: 146 active days, longest streak 48 days, busiest day 37 on 23 JUN 2026, 23 pull requests opened."></p>
+<!-- board:contrib:end -->
+
+## Products shipped
 
 - **[ProjectHub](https://projecthub-client.web.app)** · Multi-tenant business management SaaS. Per-organisation data isolation with four-tier server-side RBAC (Owner / Admin / Manager / Member) enforced on every route. bcrypt + JWT auth, Google and GitHub login with cross-provider account linking, AES-256-GCM encrypted realtime chat over Socket.io. 23 models, 14 controllers, 200+ commits.
   <br><sub>React · Node.js · Express · MongoDB · Socket.io · Redis · Firebase · Docker · <a href="https://github.com/gauranshahuja/project-management-tool">source</a></sub>
@@ -109,4 +115,4 @@ AI           Google Gemini API · OpenAI API · Vosk · OpenCV
 
 Open to software engineering roles. [gauransh3637ahuja@gmail.com](mailto:gauransh3637ahuja@gmail.com) · [LinkedIn](https://www.linkedin.com/in/gauransh-ahuja-000573261) · [Portfolio](https://gauranshportfolio.web.app)
 
-<sub>The boards on this page are SVG and CSS, no JavaScript. <a href="scripts/build-board.mjs">One script</a> rebuilds them from the GitHub API and <a href=".github/workflows/profile.yml">a workflow</a> runs it daily.</sub>
+<sub>Every graphic on this page is SVG and CSS, no JavaScript. <a href="scripts/build-board.mjs">One script</a> rebuilds them from the GitHub API and <a href=".github/workflows/profile.yml">a workflow</a> runs it daily.</sub>

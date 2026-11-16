@@ -1,5 +1,5 @@
 {
-  "active": "board",
+  "active": "motion",
   "user": "gauranshahuja",
   "name": "GAURANSH AHUJA",
   "location": "HARIDWAR · INDIA",
@@ -9,6 +9,15 @@
     "{orgs} OPEN SOURCE ORGS",
     "OPEN TO SOFTWARE ROLES"
   ],
+  "motion": {
+    "role": "SOFTWARE DEVELOPER",
+    "status": "OPEN TO SOFTWARE ROLES",
+    "slides": [
+      ["I BUILD", "SOFTWARE", "THAT SHIPS"],
+      ["{merged} PRS", "MERGED", "UPSTREAM"],
+      ["OPEN TO", "SOFTWARE", "ROLES"]
+    ]
+  },
   "links": [
     { "id": "portfolio", "label": "PORTFOLIO" },
     { "id": "linkedin", "label": "LINKEDIN" },

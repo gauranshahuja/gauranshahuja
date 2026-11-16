@@ -7,9 +7,9 @@
  *
  *   node scripts/build-board.mjs            fetch live data from the GitHub API, then build
  *   node scripts/build-board.mjs --offline  rebuild from data/prs.json
- *   node scripts/build-board.mjs --use classic   make CLASSIC.md the profile (or: --use board)
+ *   node scripts/build-board.mjs --use motion    make MOTION.md the profile (or: board, classic)
  *
- * The profile has two versions, BOARD.md and CLASSIC.md. README.md is always a copy of
+ * The profile has three versions: MOTION.md, BOARD.md and CLASSIC.md. README.md is always a copy of
  * the active one ("active" in board.config.json), and both carry a switch to the other.
  *
  * Output depends only on the pull-request data, so a run with no new activity
@@ -18,9 +18,11 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createMotion } from './looks/motion.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data', 'prs.json');
+const CONTRIB = join(ROOT, 'data', 'contrib.json');
 const OFFLINE = process.argv.includes('--offline');
 const cfg = JSON.parse(await readFile(join(ROOT, 'board.config.json'), 'utf8'));
 
@@ -85,6 +87,43 @@ async function fetchPRs() {
   prs.sort((a, b) => b.date.localeCompare(a.date) || b.number - a.number);
   return prs;
 }
+
+const LEVELS = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
+
+/** The contribution calendar of the last 12 months. GitHub only serves it over GraphQL, which needs a token. */
+async function fetchContrib() {
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (!token) throw new Error('no GITHUB_TOKEN / GH_TOKEN set');
+  const query =
+    'query($login:String!){user(login:$login){contributionsCollection{totalCommitContributions totalIssueContributions ' +
+    'totalPullRequestContributions totalPullRequestReviewContributions contributionCalendar{totalContributions ' +
+    'weeks{contributionDays{date contributionCount contributionLevel}}}}}}';
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', 'User-Agent': 'profile-board' },
+    body: JSON.stringify({ query, variables: { login: cfg.user } }),
+  });
+  const json = await res.json();
+  if (!res.ok || json.errors) throw new Error(`GraphQL ${res.status}: ${JSON.stringify(json.errors ?? json).slice(0, 200)}`);
+  const c = json.data.user.contributionsCollection;
+  return {
+    total: c.contributionCalendar.totalContributions,
+    commits: c.totalCommitContributions,
+    prs: c.totalPullRequestContributions,
+    reviews: c.totalPullRequestReviewContributions,
+    issues: c.totalIssueContributions,
+    days: c.contributionCalendar.weeks
+      .flatMap((w) => w.contributionDays)
+      .map((d) => ({ date: d.date, count: d.contributionCount, level: LEVELS[d.contributionLevel] ?? 0 })),
+  };
+}
+
+/** contrib.json keeps one day per line, so the daily diff is readable. */
+const contribJson = (c) => {
+  const { days, ...totals } = c;
+  const rows = days.map((d) => JSON.stringify([d.date, d.count, d.level])).join(',\n');
+  return `${JSON.stringify(totals).slice(0, -1)},"days":[\n${rows}\n]}\n`;
+};
 
 /* ----------------------------------------------------------------- utils */
 
@@ -685,6 +724,21 @@ const stats = {
   lastLanded: merged[0] ?? null,
 };
 
+let contrib = null;
+if (!OFFLINE) {
+  try {
+    contrib = await fetchContrib();
+  } catch (err) {
+    console.warn(`::warning::Contribution calendar not refreshed, using cached data: ${err.message}`);
+  }
+}
+if (!contrib) {
+  try {
+    contrib = JSON.parse(await readFile(CONTRIB, 'utf8'));
+    contrib.days = contrib.days.map(([date, count, level]) => ({ date, count, level }));
+  } catch {}
+}
+
 const hero = buildHero(stats);
 const arrivals = buildArrivals(prs, stats);
 const ticker = buildTicker(prs, stats);
@@ -698,7 +752,7 @@ const named = [...counts.keys()]
   .map((repo) => repoInfo(repo).prose);
 
 // Which version is the profile: the stored choice, or --use <version> to change it.
-const VERSIONS = { board: 'BOARD.md', classic: 'CLASSIC.md' };
+const VERSIONS = { motion: 'MOTION.md', board: 'BOARD.md', classic: 'CLASSIC.md' };
 let active = VERSIONS[cfg.active] ? cfg.active : 'board';
 const useAt = process.argv.indexOf('--use');
 if (useAt !== -1) {
@@ -715,13 +769,30 @@ function switchBlock(version) {
   const url = (v) => (v === active ? home : `${home}/${cfg.user}/blob/main/${VERSIONS[v]}`);
   const half = (v, label) =>
     `<a href="${url(v)}"><img src="assets/switch-${v}-${v === version ? 'on' : 'off'}.svg" height="30" alt="${label} view${v === version ? ' (showing now)' : ''}"></a>`;
-  return `<p align="right">${half('board', 'Board')} ${half('classic', 'Classic')}</p>`;
+  return `<p align="right">${half('motion', 'Motion')} ${half('board', 'Board')} ${half('classic', 'Classic')}</p>`;
 }
 
+const summaryLine = `**${stats.merged} pull requests merged upstream** in ${proseList(named)}.`;
+const image = (file, alt) => `<p align="center"><img src="assets/${file}" width="100%" alt="${esc(alt)}"></p>`;
+
+// MOTION.md
+const motion = createMotion({ cfg, esc, n2, rng, repoInfo, boardDate });
+const mHero = motion.hero(stats);
+const mOrgs = motion.orgs(prs);
+const mLog = motion.log(prs, stats);
+const mContrib = contrib ? motion.contrib(contrib) : null;
+let motionMd = await readFile(join(ROOT, VERSIONS.motion), 'utf8');
+motionMd = replaceBlock(motionMd, 'switch', switchBlock('motion'));
+motionMd = replaceBlock(motionMd, 'hero', image('m-hero.svg', mHero.title));
+motionMd = replaceBlock(motionMd, 'summary', summaryLine);
+motionMd = replaceBlock(motionMd, 'log', `${image('m-log.svg', `${mLog.title} The full list is below.`)}\n\n${prListMarkdown(prs, stats)}`);
+if (mContrib) motionMd = replaceBlock(motionMd, 'contrib', image('m-contrib.svg', mContrib.title));
+
+// BOARD.md
 let readme = await readFile(join(ROOT, VERSIONS.board), 'utf8');
 readme = replaceBlock(readme, 'switch', switchBlock('board'));
 readme = replaceBlock(readme, 'hero', `<p align="center"><img src="assets/hero.svg" width="100%" alt="${esc(hero.title)}"></p>`);
-readme = replaceBlock(readme, 'summary', `**${stats.merged} pull requests merged upstream** in ${proseList(named)}.`);
+readme = replaceBlock(readme, 'summary', summaryLine);
 readme = replaceBlock(
   readme,
   'arrivals',
@@ -737,13 +808,24 @@ const files = [
   [join(ROOT, 'assets', 'arrivals.svg'), arrivals.svg],
   [join(ROOT, 'assets', 'ticker.svg'), ticker.svg],
   ...cfg.links.map((l, i) => [join(ROOT, 'assets', `link-${l.id}.svg`), buildLink(l.label, i)]),
-  ...['board', 'classic'].flatMap((v) => [
+  [join(ROOT, 'assets', 'm-hero.svg'), mHero.svg],
+  [join(ROOT, 'assets', 'm-orgs.svg'), mOrgs.svg],
+  [join(ROOT, 'assets', 'm-log.svg'), mLog.svg],
+  ...(mContrib
+    ? [
+        [join(ROOT, 'assets', 'm-contrib.svg'), mContrib.svg],
+        [CONTRIB, contribJson(contrib)],
+      ]
+    : []),
+  ...cfg.links.map((l, i) => [join(ROOT, 'assets', `m-link-${l.id}.svg`), motion.link(l.label, i)]),
+  ...Object.keys(VERSIONS).flatMap((v) => [
     [join(ROOT, 'assets', `switch-${v}-on.svg`), buildSwitch(v.toUpperCase(), true)],
     [join(ROOT, 'assets', `switch-${v}-off.svg`), buildSwitch(v.toUpperCase(), false)],
   ]),
+  [join(ROOT, VERSIONS.motion), motionMd],
   [join(ROOT, VERSIONS.board), readme],
   [join(ROOT, VERSIONS.classic), classic],
-  [join(ROOT, 'README.md'), active === 'board' ? readme : classic],
+  [join(ROOT, 'README.md'), { motion: motionMd, board: readme, classic }[active]],
   [join(ROOT, 'board.config.json'), configText.replace(/"active":\s*"[^"]*"/,`"active": "${active}"`)],
 ];
 let changed = 0;
