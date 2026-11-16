@@ -1,0 +1,71 @@
+name: Profile
+
+# Rebuilds the boards from the GitHub API every day.
+# To switch the profile between the two versions: Actions -> Profile -> Run workflow -> pick a version.
+
+on:
+  schedule:
+    # once a day at 00:30 UTC
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to show on the profile"
+        type: choice
+        default: keep current
+        options:
+          - keep current
+          - board
+          - classic
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "board.config.json"
+      - "BOARD.md"
+      - "CLASSIC.md"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Refresh "Recent Activity" in the classic version
+        uses: jamesgeorge007/github-activity-readme@master
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
+        with:
+          TARGET_FILE: CLASSIC.md
+          COMMIT_MSG: "chore: update recent activity"
+          MAX_LINES: 5
+
+      - name: Rebuild the boards and README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          case "$VERSION" in
+            board|classic) node scripts/build-board.mjs --use "$VERSION" ;;
+            *) node scripts/build-board.mjs ;;
+          esac
+
+      - name: Commit if anything changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: update profile"
+            git pull --rebase --quiet
+            git push
+          fi

@@ -1,0 +1,27 @@
+{
+  "active": "board",
+  "user": "gauranshahuja",
+  "name": "GAURANSH AHUJA",
+  "location": "HARIDWAR · INDIA",
+  "messages": [
+    "SOFTWARE DEVELOPER",
+    "{merged} PRS MERGED UPSTREAM",
+    "{orgs} OPEN SOURCE ORGS",
+    "OPEN TO SOFTWARE ROLES"
+  ],
+  "links": [
+    { "id": "portfolio", "label": "PORTFOLIO" },
+    { "id": "linkedin", "label": "LINKEDIN" },
+    { "id": "email", "label": "EMAIL" }
+  ],
+  "exclude": ["KeshavMothwal/am-azon"],
+  "repos": {
+    "firebase/firebase-tools": { "board": "FIREBASE CLI", "prose": "Google's Firebase CLI", "heading": "Firebase CLI · Google" },
+    "aws/aws-cdk": { "board": "AWS CDK", "prose": "AWS CDK", "heading": "AWS CDK · Amazon Web Services" },
+    "internetarchive/openlibrary": { "board": "OPEN LIBRARY", "prose": "Internet Archive's Open Library", "heading": "Open Library · Internet Archive" },
+    "sugarlabs/musicblocks-v4": { "board": "MUSIC BLOCKS V4", "prose": "Sugar Labs' Music Blocks", "heading": "Music Blocks v4 · Sugar Labs" },
+    "kubeflow/notebooks": { "board": "KUBEFLOW NOTEBOOKS", "prose": "Kubeflow Notebooks", "heading": "Kubeflow Notebooks" },
+    "eclipse-sw360/sw360-frontend": { "board": "ECLIPSE SW360", "prose": "Eclipse SW360", "heading": "SW360 frontend · Eclipse Foundation" },
+    "meta/docusaurus": { "board": "DOCUSAURUS", "prose": "Docusaurus", "heading": "Docusaurus · Meta" }
+  }
+}

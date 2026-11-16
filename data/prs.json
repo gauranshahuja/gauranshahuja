@@ -1,0 +1,172 @@
+{
+  "prs": [
+    {
+      "repo": "aws/aws-cdk",
+      "number": 39752,
+      "title": "feat(ec2): support IPv6 IPAM allocation for Subnet",
+      "url": "https://github.com/aws/aws-cdk/pull/39752",
+      "state": "open",
+      "date": "2026-11-16"
+    },
+    {
+      "repo": "aws/aws-cdk",
+      "number": 38810,
+      "title": "feat(ec2): support IPAM CIDR allocation for Subnet",
+      "url": "https://github.com/aws/aws-cdk/pull/38810",
+      "state": "merged",
+      "date": "2026-11-16"
+    },
+    {
+      "repo": "firebase/firebase-tools",
+      "number": 11509,
+      "title": "fix(firestore): do not create a missing database on deploy --dry-run",
+      "url": "https://github.com/firebase/firebase-tools/pull/11509",
+      "state": "approved",
+      "date": "2026-11-13"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14367,
+      "title": "Summarize failed Goodreads imports and let patrons download them as CSV",
+      "url": "https://github.com/internetarchive/openlibrary/pull/14367",
+      "state": "open",
+      "date": "2026-11-10"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 14243,
+      "title": "Replace deprecated datetime.utcnow() and utcfromtimestamp() (ruff DTZ003, DTZ004)",
+      "url": "https://github.com/internetarchive/openlibrary/pull/14243",
+      "state": "merged",
+      "date": "2026-11-05"
+    },
+    {
+      "repo": "firebase/firebase-tools",
+      "number": 11407,
+      "title": "fix(emulator): show the listen address next to the Emulator UI and Hub links",
+      "url": "https://github.com/firebase/firebase-tools/pull/11407",
+      "state": "merged",
+      "date": "2026-11-03"
+    },
+    {
+      "repo": "eclipse-sw360/sw360-frontend",
+      "number": 2113,
+      "title": "feat(sidebar): Allow opening sidebar tabs in a new browser tab",
+      "url": "https://github.com/eclipse-sw360/sw360-frontend/pull/2113",
+      "state": "merged",
+      "date": "2026-10-30"
+    },
+    {
+      "repo": "firebase/firebase-tools",
+      "number": 11042,
+      "title": "fix(emulator): warn instead of crashing when the Firestore rules watcher fails",
+      "url": "https://github.com/firebase/firebase-tools/pull/11042",
+      "state": "merged",
+      "date": "2026-10-28"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13732,
+      "title": "Lint patron_data.sql and import-partial.sql with sqlfluff 4.4.0",
+      "url": "https://github.com/internetarchive/openlibrary/pull/13732",
+      "state": "merged",
+      "date": "2026-10-12"
+    },
+    {
+      "repo": "kubeflow/notebooks",
+      "number": 1441,
+      "title": "improve: show secret modal errors next to the action buttons and clear them on edit",
+      "url": "https://github.com/kubeflow/notebooks/pull/1441",
+      "state": "merged",
+      "date": "2026-10-05"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13731,
+      "title": "Admin edit history: keep the page after a revert and add a numbered pager",
+      "url": "https://github.com/internetarchive/openlibrary/pull/13731",
+      "state": "merged",
+      "date": "2026-10-01"
+    },
+    {
+      "repo": "sugarlabs/musicblocks-v4",
+      "number": 923,
+      "title": "#811 | feat(masonry): add cleanWorkspace to the workspace store",
+      "url": "https://github.com/sugarlabs/musicblocks-v4/pull/923",
+      "state": "open",
+      "date": "2026-09-29"
+    },
+    {
+      "repo": "sugarlabs/musicblocks-v4",
+      "number": 906,
+      "title": "#811 | feat(masonry): measure a tower's laid-out extent",
+      "url": "https://github.com/sugarlabs/musicblocks-v4/pull/906",
+      "state": "merged",
+      "date": "2026-09-29"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13590,
+      "title": "Convert LazyCarousel partial to Jinja",
+      "url": "https://github.com/internetarchive/openlibrary/pull/13590",
+      "state": "merged",
+      "date": "2026-09-12"
+    },
+    {
+      "repo": "firebase/firebase-tools",
+      "number": 11083,
+      "title": "fix(emulator): stop repeating network access warnings for a URL already reported",
+      "url": "https://github.com/firebase/firebase-tools/pull/11083",
+      "state": "open",
+      "date": "2026-09-12"
+    },
+    {
+      "repo": "sugarlabs/musicblocks-v4",
+      "number": 821,
+      "title": "#807 | feat(masonry): pan the canvas by dragging the background",
+      "url": "https://github.com/sugarlabs/musicblocks-v4/pull/821",
+      "state": "merged",
+      "date": "2026-09-12"
+    },
+    {
+      "repo": "aws/aws-cdk",
+      "number": 38814,
+      "title": "feat(appsync): support adding an auth provider to an Event API after creation",
+      "url": "https://github.com/aws/aws-cdk/pull/38814",
+      "state": "open",
+      "date": "2026-09-11"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13576,
+      "title": "Convert BookPageLists partial to Jinja",
+      "url": "https://github.com/internetarchive/openlibrary/pull/13576",
+      "state": "merged",
+      "date": "2026-09-11"
+    },
+    {
+      "repo": "meta/docusaurus",
+      "number": 12431,
+      "title": "feat(core): resolve Markdown file links across plugins (AI-assisted)",
+      "url": "https://github.com/meta/docusaurus/pull/12431",
+      "state": "open",
+      "date": "2026-09-10"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13577,
+      "title": "Convert SearchFacets partial to Jinja",
+      "url": "https://github.com/internetarchive/openlibrary/pull/13577",
+      "state": "merged",
+      "date": "2026-09-08"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "number": 13563,
+      "title": "Convert MyBooksDropperLists partial to Jinja",
+      "url": "https://github.com/internetarchive/openlibrary/pull/13563",
+      "state": "merged",
+      "date": "2026-09-06"
+    }
+  ]
+}
