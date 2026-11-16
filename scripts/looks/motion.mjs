@@ -535,8 +535,9 @@ export function createMotion({ cfg, esc, n2, rng, repoInfo, boardDate }) {
       `.num{font:700 ${F}px ${FONT};fill:${K.ink};text-anchor:middle}.val{font:700 30px ${FONT};fill:${K.ink}}` +
       `.hd{font:700 13px ${FONT};letter-spacing:4.5px;fill:${K.ink}}` +
       `.sl{font:600 10px ${MONO};letter-spacing:1.4px;fill:${K.mute}}.sl.lime{fill:${K.lime}}` +
-      `.od{transform:translateY(var(--y));animation:od ${SWEEP}s cubic-bezier(.16,1,.3,1) var(--d,0s) infinite}` +
-      `@keyframes od{0%{transform:translateY(0)}30%{transform:translateY(var(--y))}100%{transform:translateY(var(--y))}}` +
+      // the counter rolls once on load and then stays put, so the number on screen is the real one
+      `.od{transform:translateY(var(--y));animation:od 1.9s cubic-bezier(.16,1,.3,1) var(--d,0s) 1 both}` +
+      `@keyframes od{0%{transform:translateY(0)}100%{transform:translateY(var(--y))}}` +
       `.fl{fill:${K.ink};opacity:0;animation:fl ${SWEEP}s linear var(--d,0s) infinite}@keyframes fl{0%{opacity:.5}7%{opacity:0}100%{opacity:0}}` +
       `.sc{opacity:0;animation:sc ${SWEEP}s linear infinite}@keyframes sc{0%{transform:translateX(0);opacity:1}100%{transform:translateX(${n2(span)}px);opacity:1}}`;
 
