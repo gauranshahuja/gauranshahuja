@@ -184,7 +184,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#11509](https://github.com/firebase/firebase-tools/pull/11509) in [firebase/firebase-tools](https://github.com/firebase/firebase-tools)
+1. 💪 Opened PR [#39752](https://github.com/aws/aws-cdk/pull/39752) in [aws/aws-cdk](https://github.com/aws/aws-cdk)
 <!--END_SECTION:activity-->
 
 ---
