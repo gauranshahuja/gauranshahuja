@@ -1,8 +1,7 @@
-<!-- board:switch:start -->
-<p align="right">Showing <kbd>MOTION</kbd> · two more looks:</p>
+<p align="right">Three looks of this profile: open one and the others close.</p>
 
-<details>
-<summary><kbd>BOARD</kbd> view · click to open it here</summary>
+<details name="look">
+<summary><kbd>BOARD</kbd> view</summary>
 <br>
 
 <!-- board:hero:start -->
@@ -116,8 +115,8 @@ Open to software engineering roles. [gauransh3637ahuja@gmail.com](mailto:gaurans
 
 </details>
 
-<details>
-<summary><kbd>CLASSIC</kbd> view · click to open it here</summary>
+<details name="look">
+<summary><kbd>CLASSIC</kbd> view</summary>
 <br>
 
 <!-- ============ HEADER ============ -->
@@ -323,7 +322,10 @@ I’m open to **full-stack / software engineering opportunities**. Building thin
 </div>
 
 </details>
-<!-- board:switch:end -->
+
+<details name="look" open>
+<summary><kbd>MOTION</kbd> view</summary>
+<br>
 
 <!-- board:hero:start -->
 <p align="center"><img src="assets/m-hero.svg" width="100%" alt="GAURANSH AHUJA. I BUILD SOFTWARE THAT SHIPS. 14 PRS MERGED UPSTREAM. OPEN TO SOFTWARE ROLES. 14 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
@@ -499,14 +501,14 @@ Selected work:
 | Tue 15 Sep | 1 | **leetcode-s_solutions**: day 076: LRU Cache (Medium) |
 | Mon 14 Sep | 1 | **leetcode-s_solutions**: day 075: Copy List with Random Pointer (Medium) |
 | Sun 13 Sep | 2 | **leetcode-s_solutions**: day 074: Subsets II (Medium) |
-| Sat 12 Sep | 3 | **leetcode-s_solutions**: day 073: Letter Combinations of a Phone Number (Medium)<br>**internetarchive/openlibrary**: Convert LazyCarousel partial to Jinja (#13590)<br>opened PR firebase/firebase-tools#11083: fix(emulator): stop repeating network access warnings for a URL already reported |
-| Fri 11 Sep | 5 | **leetcode-s_solutions**: day 072: Combination Sum (Medium)<br>**internetarchive/openlibrary**: Convert BookPageLists partial to Jinja (#13576)<br>opened PR aws/aws-cdk#38810: feat(ec2): support IPAM CIDR allocation for Subnet<br>opened PR sugarlabs/musicblocks-v4#834: #811 \| feat(masonry): clean the workspace into a column of towers<br>opened PR aws/aws-cdk#38814: feat(appsync): support adding an auth provider to an Event API after creation |
-| Thu 10 Sep | 2 | **leetcode-s_solutions**: day 071: Word Search (Medium)<br>opened PR meta/docusaurus#12431: feat(core): resolve Markdown file links across plugins (AI-assisted) |
-| Wed 9 Sep | 6 | **leetcode-s_solutions**: day 070: Search a 2D Matrix II (Medium)<br>opened PR internetarchive/openlibrary#13590: Convert LazyCarousel partial to Jinja |
+| Sat 12 Sep | 4 | **leetcode-s_solutions**: day 073: Letter Combinations of a Phone Number (Medium)<br>**internetarchive/openlibrary**: Convert LazyCarousel partial to Jinja (#13590)<br>opened PR firebase/firebase-tools#11083: fix(emulator): stop repeating network access warnings for a URL already reported |
+| Fri 11 Sep | 4 | **leetcode-s_solutions**: day 072: Combination Sum (Medium)<br>**internetarchive/openlibrary**: Convert BookPageLists partial to Jinja (#13576)<br>opened PR aws/aws-cdk#38810: feat(ec2): support IPAM CIDR allocation for Subnet<br>opened PR sugarlabs/musicblocks-v4#834: #811 \| feat(masonry): clean the workspace into a column of towers<br>opened PR aws/aws-cdk#38814: feat(appsync): support adding an auth provider to an Event API after creation |
+| Thu 10 Sep | 3 | **leetcode-s_solutions**: day 071: Word Search (Medium)<br>opened PR meta/docusaurus#12431: feat(core): resolve Markdown file links across plugins (AI-assisted) |
+| Wed 9 Sep | 5 | **leetcode-s_solutions**: day 070: Search a 2D Matrix II (Medium)<br>opened PR internetarchive/openlibrary#13590: Convert LazyCarousel partial to Jinja |
 | Tue 8 Sep | 5 | **leetcode-s_solutions**: day 069: Capacity To Ship Packages Within D Days (Medium)<br>**internetarchive/openlibrary**: Convert SearchFacets partial to Jinja (#13577)<br>**sugarlabs/musicblocks-v4**: #807 \| feat(masonry): add a workspace viewport store; #807 \| feat(masonry): pan the canvas by dragging the background; #807 \| fix(masonry): take the viewport offset out of palette drops<br>opened PR sugarlabs/musicblocks-v4#821: #807 \| feat(masonry): pan the canvas by dragging the background |
 | Mon 7 Sep | 1 | **leetcode-s_solutions**: day 068: Koko Eating Bananas (Medium) |
-| Sun 6 Sep | 6 | **leetcode-s_solutions**: day 067: Kth Largest Element in an Array (Medium)<br>**internetarchive/openlibrary**: Convert MyBooksDropperLists partial to Jinja (#13563)<br>opened PR internetarchive/openlibrary#13576: Convert BookPageLists partial to Jinja<br>opened PR internetarchive/openlibrary#13577: Convert SearchFacets partial to Jinja |
-| Sat 5 Sep | 3 | **leetcode-s_solutions**: day 066: Find All Anagrams in a String (Medium)<br>opened PR internetarchive/openlibrary#13563: Convert MyBooksDropperLists partial to Jinja<br>opened PR firebase/firebase-tools#11042: fix(emulator): warn instead of crashing when the Firestore rules watcher fails |
+| Sun 6 Sep | 8 | **leetcode-s_solutions**: day 067: Kth Largest Element in an Array (Medium)<br>**internetarchive/openlibrary**: Convert MyBooksDropperLists partial to Jinja (#13563)<br>opened PR internetarchive/openlibrary#13576: Convert BookPageLists partial to Jinja<br>opened PR internetarchive/openlibrary#13577: Convert SearchFacets partial to Jinja |
+| Sat 5 Sep | 1 | **leetcode-s_solutions**: day 066: Find All Anagrams in a String (Medium)<br>opened PR internetarchive/openlibrary#13563: Convert MyBooksDropperLists partial to Jinja<br>opened PR firebase/firebase-tools#11042: fix(emulator): warn instead of crashing when the Firestore rules watcher fails |
 | Fri 4 Sep | 2 | **leetcode-s_solutions**: day 065: Max Consecutive Ones III (Medium) |
 | Thu 3 Sep | 1 | **leetcode-s_solutions**: docs: fix 104 broken topic links, add honest counts and MIT LICENSE; day 064: Permutation in String (Medium) |
 | Wed 2 Sep | 7 | **project-management-tool**: chore: track .env.example templates instead of .env files; docs: add MIT license; test: add auth, invite, RBAC and tenancy integration suite (45 tests) (+3 more)<br>**leetcode-s_solutions**: day 063: Longest Repeating Character Replacement (Medium) |
@@ -606,8 +608,8 @@ Selected work:
 | Wed 24 Jun | 12 | **leetcode-s_solutions**: Create README - LeetHub; Time: 0 ms (100%), Space: 22.6 MB (80.25%) - LeetHub; Update README - Topic Tags (+11 more) |
 | Tue 23 Jun | 37 | **project-management-tool**: chore: adopt env-based Firebase config and updated README; feat: contacts directory, recurring tasks, product supplier link<br>**leetcode-s_solutions**: Create README - LeetHub; Time: 815 ms (45.37%), Space: 647.5 MB (15.74%) - LeetHub; Update README - Topic Tags (+21 more)<br>**gauranshahuja**: Cache-bust streak widget to show current 40-day streak; Update Live Demo link in README.md |
 | Mon 22 Jun | 22 | **project-management-tool**: feat: task subtasks/checklist and purchase orders; feat: home dashboard summary endpoint<br>**leetcode-s_solutions**: Create README - LeetHub; Time: 157 ms (75%), Space: 32.3 MB (50%) - LeetHub; Update README - Topic Tags (+15 more)<br>**gauranshahuja**: Add auto-updating recent activity section; Fix activity workflow: pass GITHUB_TOKEN via env; Fix activity workflow: add checkout step (+1 more) |
-| Sun 21 Jun | 29 | **project-management-tool**: feat: email notifications (invite, task assign, leave review); feat: reports module with CSV export<br>**leetcode-s_solutions**: Add polished header with live LeetCode stats card<br>**gauranshahuja**: Add live LeetCode stats card to profile; Update featured projects: add StockFlow, rename Catalog Engine to Sho…; Add ScraperPro + LeetCode cards to featured projects (+1 more) |
-| Sat 20 Jun | 9 | **project-management-tool**: perf: split frontend bundles and harden notifications<br>**gauranshahuja**: Add profile README<br>**jarvis**: Initial commit: JARVIS offline voice assistant (English + Hindi); Polish README: professional hero, feature highlights, badges & archit… |
+| Sun 21 Jun | 33 | **project-management-tool**: feat: email notifications (invite, task assign, leave review); feat: reports module with CSV export<br>**leetcode-s_solutions**: Add polished header with live LeetCode stats card<br>**gauranshahuja**: Add live LeetCode stats card to profile; Update featured projects: add StockFlow, rename Catalog Engine to Sho…; Add ScraperPro + LeetCode cards to featured projects (+1 more) |
+| Sat 20 Jun | 5 | **project-management-tool**: perf: split frontend bundles and harden notifications<br>**gauranshahuja**: Add profile README<br>**jarvis**: Initial commit: JARVIS offline voice assistant (English + Hindi); Polish README: professional hero, feature highlights, badges & archit… |
 | Fri 19 Jun | 27 | **project-management-tool**: feat: inventory orders + transfers, HR frontend, realtime client; feat: personal notifications with realtime delivery; feat: add notifications and inventory frontend (+2 more) |
 | Thu 18 Jun | 9 | **project-management-tool**: feat: inventory module phase 1 (warehouses, products, batch stock, FEFO); feat: frontend polish across pages |
 | Wed 17 Jun | 24 | **project-management-tool**: feat: realtime layer (Socket.io presence + live activity events); feat: team chat backend (encrypted messages + realtime); chore: ignore temp _order-hub-import folder |
@@ -797,3 +799,5 @@ AI           Google Gemini API · OpenAI API · Vosk · OpenCV
 Open to software engineering roles. [gauransh3637ahuja@gmail.com](mailto:gauransh3637ahuja@gmail.com) · [LinkedIn](https://www.linkedin.com/in/gauransh-ahuja-000573261) · [Portfolio](https://gauranshportfolio.web.app)
 
 <sub>Every graphic on this page is SVG and CSS, no JavaScript. <a href="scripts/build-board.mjs">One script</a> rebuilds them from the GitHub API and <a href=".github/workflows/profile.yml">a workflow</a> runs it daily.</sub>
+
+</details>

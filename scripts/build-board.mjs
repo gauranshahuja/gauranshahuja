@@ -932,23 +932,24 @@ const classic = replaceBlock(await readFile(join(ROOT, VERSIONS.classic), 'utf8'
 const configText = await readFile(join(ROOT, 'board.config.json'), 'utf8');
 
 /**
- * README.md is the active version, with the other two folded in at the top. A profile README runs no
- * script or style, so a real tab switch is impossible; <details> is the one thing GitHub lets open in place.
+ * README.md holds all three looks as one switch. A profile README runs no script or style, but GitHub keeps
+ * the `name` attribute of <details>, and browsers open only one <details> of a name group at a time: opening
+ * BOARD closes MOTION in place. The active look is last and open, so the two closed ones sit at the top.
  * The summaries are text, not the switch images: GitHub wraps an image in a link to the image file, and a
  * click on it would open that file instead of the section.
  */
-function inlineSwitch(contents) {
+function profileSwitch(contents) {
   const label = { motion: 'MOTION', board: 'BOARD', classic: 'CLASSIC' };
-  const others = Object.keys(VERSIONS).filter((v) => v !== active);
-  const folded = others.map(
+  const order = [...Object.keys(VERSIONS).filter((v) => v !== active), active];
+  const looks = order.map(
     (v) =>
-      `<details>\n<summary><kbd>${label[v]}</kbd> view · click to open it here</summary>\n<br>\n\n` +
+      `<details name="look"${v === active ? ' open' : ''}>\n<summary><kbd>${label[v]}</kbd> view</summary>\n<br>\n\n` +
       `${replaceBlock(contents[v], 'switch', '').replace(/<!-- board:switch:start -->\s*<!-- board:switch:end -->\s*/, '').trim()}\n\n</details>`,
   );
-  return `<p align="right">Showing <kbd>${label[active]}</kbd> · two more looks:</p>\n\n${folded.join('\n\n')}`;
+  return `<p align="right">Three looks of this profile: open one and the others close.</p>\n\n${looks.join('\n\n')}\n`;
 }
 const contents = { motion: motionMd, board: readme, classic };
-const profileReadme = replaceBlock(contents[active], 'switch', inlineSwitch(contents));
+const profileReadme = profileSwitch(contents);
 
 const files = [
   [DATA, JSON.stringify({ prs }, null, 2) + '\n'],
