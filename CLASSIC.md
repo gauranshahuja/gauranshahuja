@@ -1,5 +1,5 @@
 <!-- board:switch:start -->
-<p align="right"><a href="https://github.com/gauranshahuja/gauranshahuja/blob/main/BOARD.md"><img src="assets/switch-board-off.svg" height="30" alt="Board view"></a> <a href="https://github.com/gauranshahuja"><img src="assets/switch-classic-on.svg" height="30" alt="Classic view (showing now)"></a></p>
+<p align="right"><a href="https://github.com/gauranshahuja"><img src="assets/switch-board-off.svg" height="30" alt="Board view"></a> <a href="https://github.com/gauranshahuja/gauranshahuja/blob/main/CLASSIC.md"><img src="assets/switch-classic-on.svg" height="30" alt="Classic view (showing now)"></a></p>
 <!-- board:switch:end -->
 
 <!-- ============ HEADER ============ -->
