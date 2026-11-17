@@ -84,18 +84,19 @@ Selected work:
 ## Contributions
 
 <!-- board:contrib:start -->
-<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,201 contributions in the last 12 months: 256 active days, longest streak 186 days (15 MAY to 16 NOV), current streak 186 days, busiest day 37 on 23 JUN 2026, 23 pull requests opened."></p>
+<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,206 contributions in the last 12 months: 257 active days, longest streak 187 days (15 MAY to 17 NOV), current streak 187 days, busiest day 37 on 23 JUN 2026, 23 pull requests opened."></p>
 
 <details>
 <summary><b>Day by day</b>: what each square on the chart was</summary>
 <br>
 
 <details open>
-<summary>November 2026 · 16 active days · 35 contributions</summary>
+<summary>November 2026 · 17 active days · 40 contributions</summary>
 
 | Day | Count | What |
 |---|--:|---|
-| Mon 16 Nov | 13 | **leetcode-s_solutions**: day 138: Count of Smaller Numbers After Self (Hard); add month-05-november-hard-1 notes; add REVISIT.md (+2 more)<br>**gauranshahuja**: feat: split-flap profile board, with a switch to the classic profile; feat: MOTION look, a third switchable profile version; feat(motion): date the best streak and add a current-streak counter (+3 more)<br>**aws/aws-cdk**: feat(ec2): support IPAM CIDR allocation for Subnet (#38810)<br>opened issue aws/aws-cdk#39750: (aws-ec2): Support IPv6 IPAM allocation in L2 Subnet construct<br>opened PR aws/aws-cdk#39752: feat(ec2): support IPv6 IPAM allocation for Subnet |
+| Tue 17 Nov | 4 | no public details |
+| Mon 16 Nov | 14 | **leetcode-s_solutions**: day 138: Count of Smaller Numbers After Self (Hard); add month-05-november-hard-1 notes; add REVISIT.md (+6 more)<br>**gauranshahuja**: feat: split-flap profile board, with a switch to the classic profile; feat: MOTION look, a third switchable profile version; feat(motion): date the best streak and add a current-streak counter (+3 more)<br>**aws/aws-cdk**: feat(ec2): support IPAM CIDR allocation for Subnet (#38810)<br>opened issue aws/aws-cdk#39750: (aws-ec2): Support IPv6 IPAM allocation in L2 Subnet construct<br>opened PR aws/aws-cdk#39752: feat(ec2): support IPv6 IPAM allocation for Subnet |
 | Sun 15 Nov | 1 | **leetcode-s_solutions**: day 137: Burst Balloons (Hard) |
 | Sat 14 Nov | 1 | **leetcode-s_solutions**: day 136: Candy (Hard) |
 | Fri 13 Nov | 3 | **leetcode-s_solutions**: add lib/structures.js: shared ListNode, TreeNode, PriorityQueue, DSU; day 135: Find Median from Data Stream (Hard)<br>opened PR firebase/firebase-tools#11509: fix(firestore): do not create a missing database on deploy --dry-run |
