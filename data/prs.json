@@ -1,6 +1,14 @@
 {
   "prs": [
     {
+      "repo": "firebase/firebase-tools",
+      "number": 11509,
+      "title": "fix(firestore): do not create a missing database on deploy --dry-run",
+      "url": "https://github.com/firebase/firebase-tools/pull/11509",
+      "state": "merged",
+      "date": "2026-11-17"
+    },
+    {
       "repo": "aws/aws-cdk",
       "number": 39752,
       "title": "feat(ec2): support IPv6 IPAM allocation for Subnet",
@@ -15,14 +23,6 @@
       "url": "https://github.com/aws/aws-cdk/pull/38810",
       "state": "merged",
       "date": "2026-11-16"
-    },
-    {
-      "repo": "firebase/firebase-tools",
-      "number": 11509,
-      "title": "fix(firestore): do not create a missing database on deploy --dry-run",
-      "url": "https://github.com/firebase/firebase-tools/pull/11509",
-      "state": "approved",
-      "date": "2026-11-13"
     },
     {
       "repo": "internetarchive/openlibrary",

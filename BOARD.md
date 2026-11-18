@@ -3,7 +3,7 @@
 <!-- board:switch:end -->
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 14 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
+<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 6 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
@@ -13,7 +13,7 @@
 </p>
 
 <!-- board:summary:start -->
-**14 pull requests merged upstream** in Google's Firebase CLI, AWS CDK, Internet Archive's Open Library, Sugar Labs' Music Blocks, Kubeflow Notebooks and Eclipse SW360.
+**15 pull requests merged upstream** in Google's Firebase CLI, AWS CDK, Internet Archive's Open Library, Sugar Labs' Music Blocks, Kubeflow Notebooks and Eclipse SW360.
 <!-- board:summary:end -->
 
 Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Google Cloud Run and Firebase. MCA (AI & ML), Manipal University Jaipur, expected 2027. Based in Haridwar, India.
@@ -23,10 +23,10 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 ## Arrivals: code merged upstream
 
 <!-- board:arrivals:start -->
-<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 14 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
+<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 6 in review. The full list is below."></p>
 
 <details>
-<summary><b>All 14 merged pull requests</b>, with links · 7 more in review</summary>
+<summary><b>All 15 merged pull requests</b>, with links · 6 more in review</summary>
 <br>
 
 **Open Library · Internet Archive** — 7 merged
@@ -39,8 +39,9 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 - [#13577](https://github.com/internetarchive/openlibrary/pull/13577) Convert SearchFacets partial to Jinja · <sub>8 Sep 2026</sub>
 - [#13563](https://github.com/internetarchive/openlibrary/pull/13563) Convert MyBooksDropperLists partial to Jinja · <sub>6 Sep 2026</sub>
 
-**Firebase CLI · Google** — 2 merged
+**Firebase CLI · Google** — 3 merged
 
+- [#11509](https://github.com/firebase/firebase-tools/pull/11509) fix(firestore): do not create a missing database on deploy --dry-run · <sub>17 Nov 2026</sub>
 - [#11407](https://github.com/firebase/firebase-tools/pull/11407) fix(emulator): show the listen address next to the Emulator UI and Hub links · <sub>3 Nov 2026</sub>
 - [#11042](https://github.com/firebase/firebase-tools/pull/11042) fix(emulator): warn instead of crashing when the Firestore rules watcher fails · <sub>28 Oct 2026</sub>
 
@@ -64,7 +65,6 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 **In review**
 
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
-- [firebase/firebase-tools #11509](https://github.com/firebase/firebase-tools/pull/11509) fix(firestore): do not create a missing database on deploy --dry-run · <sub>approved</sub>
 - [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV
 - [sugarlabs/musicblocks-v4 #923](https://github.com/sugarlabs/musicblocks-v4/pull/923) #811 | feat(masonry): add cleanWorkspace to the workspace store
 - [firebase/firebase-tools #11083](https://github.com/firebase/firebase-tools/pull/11083) fix(emulator): stop repeating network access warnings for a URL already reported
