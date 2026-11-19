@@ -1,4 +1,4 @@
-<p align="right">Three looks of this profile: open one and the others close.</p>
+<p align="right">Three looks: choose the one you like.</p>
 
 <details name="look">
 <summary><kbd>BOARD</kbd> view</summary>
