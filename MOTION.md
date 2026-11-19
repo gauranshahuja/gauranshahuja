@@ -65,7 +65,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 **In review**
 
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
-- [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV
+- [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV · <sub>approved</sub>
 - [sugarlabs/musicblocks-v4 #923](https://github.com/sugarlabs/musicblocks-v4/pull/923) #811 | feat(masonry): add cleanWorkspace to the workspace store
 - [firebase/firebase-tools #11083](https://github.com/firebase/firebase-tools/pull/11083) fix(emulator): stop repeating network access warnings for a URL already reported
 - [aws/aws-cdk #38814](https://github.com/aws/aws-cdk/pull/38814) feat(appsync): support adding an auth provider to an Event API after creation
