@@ -3,7 +3,7 @@
 <!-- board:switch:end -->
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/m-hero.svg" width="100%" alt="GAURANSH AHUJA. I BUILD SOFTWARE THAT SHIPS. 15 PRS MERGED UPSTREAM. OPEN TO SOFTWARE ROLES. 15 pull requests merged upstream across 6 open-source organisations, 6 in review."></p>
+<p align="center"><img src="assets/m-hero.svg" width="100%" alt="GAURANSH AHUJA. I BUILD SOFTWARE THAT SHIPS. 15 PRS MERGED UPSTREAM. OPEN TO SOFTWARE ROLES. 15 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
@@ -23,10 +23,10 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 ## Merged upstream
 
 <!-- board:log:start -->
-<p align="center"><img src="assets/m-log.svg" width="100%" alt="Merge log: 15 pull requests merged into upstream repositories, 6 in review. The full list is below."></p>
+<p align="center"><img src="assets/m-log.svg" width="100%" alt="Merge log: 15 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
 
 <details>
-<summary><b>All 15 merged pull requests</b>, with links · 6 more in review</summary>
+<summary><b>All 15 merged pull requests</b>, with links · 7 more in review</summary>
 <br>
 
 **Open Library · Internet Archive** — 7 merged
@@ -64,6 +64,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 
 **In review**
 
+- [internetarchive/openlibrary #14602](https://github.com/internetarchive/openlibrary/pull/14602) Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412) · <sub>approved</sub>
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
 - [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV · <sub>approved</sub>
 - [sugarlabs/musicblocks-v4 #923](https://github.com/sugarlabs/musicblocks-v4/pull/923) #811 | feat(masonry): add cleanWorkspace to the workspace store
@@ -84,17 +85,19 @@ Selected work:
 ## Contributions
 
 <!-- board:contrib:start -->
-<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,208 contributions in the last 12 months: 258 active days, longest streak 188 days (15 MAY to 18 NOV), current streak 188 days, busiest day 37 on 23 JUN 2026, 23 pull requests opened."></p>
+<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,217 contributions in the last 12 months: 260 active days, longest streak 190 days (15 MAY to 20 NOV), current streak 190 days, busiest day 37 on 23 JUN 2026, 24 pull requests opened."></p>
 
 <details>
 <summary><b>Day by day</b>: what each square on the chart was</summary>
 <br>
 
 <details open>
-<summary>November 2026 · 18 active days · 42 contributions</summary>
+<summary>November 2026 · 20 active days · 51 contributions</summary>
 
 | Day | Count | What |
 |---|--:|---|
+| Fri 20 Nov | 1 | no public details |
+| Thu 19 Nov | 8 | **leetcode-s_solutions**: Create README - LeetHub; Time: 32 ms (97.2%), Space: 67.5 MB (10.73%) - LeetHub; Update README - Topic Tags (+4 more)<br>**gauranshahuja**: Update text in README for clarity; Align text to the left in README<br>opened PR internetarchive/openlibrary#14602: Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412) |
 | Wed 18 Nov | 1 | no public details |
 | Tue 17 Nov | 5 | **leetcode-s_solutions**: personal-practice: day 013 and 024 took four attempts; day 137 time b…<br>**firebase/firebase-tools**: fix(firestore): do not create a missing database on deploy --dry-run … |
 | Mon 16 Nov | 14 | **leetcode-s_solutions**: day 138: Count of Smaller Numbers After Self (Hard); add month-05-november-hard-1 notes; add REVISIT.md (+6 more)<br>**gauranshahuja**: feat: split-flap profile board, with a switch to the classic profile; feat: MOTION look, a third switchable profile version; feat(motion): date the best streak and add a current-streak counter (+3 more)<br>**aws/aws-cdk**: feat(ec2): support IPAM CIDR allocation for Subnet (#38810)<br>opened issue aws/aws-cdk#39750: (aws-ec2): Support IPv6 IPAM allocation in L2 Subnet construct<br>opened PR aws/aws-cdk#39752: feat(ec2): support IPv6 IPAM allocation for Subnet |

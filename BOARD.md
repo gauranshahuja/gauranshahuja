@@ -3,7 +3,7 @@
 <!-- board:switch:end -->
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 6 in review."></p>
+<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
@@ -23,10 +23,10 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 ## Arrivals: code merged upstream
 
 <!-- board:arrivals:start -->
-<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 6 in review. The full list is below."></p>
+<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
 
 <details>
-<summary><b>All 15 merged pull requests</b>, with links · 6 more in review</summary>
+<summary><b>All 15 merged pull requests</b>, with links · 7 more in review</summary>
 <br>
 
 **Open Library · Internet Archive** — 7 merged
@@ -64,6 +64,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 
 **In review**
 
+- [internetarchive/openlibrary #14602](https://github.com/internetarchive/openlibrary/pull/14602) Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412) · <sub>approved</sub>
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
 - [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV · <sub>approved</sub>
 - [sugarlabs/musicblocks-v4 #923](https://github.com/sugarlabs/musicblocks-v4/pull/923) #811 | feat(masonry): add cleanWorkspace to the workspace store

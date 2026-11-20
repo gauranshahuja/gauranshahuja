@@ -1,6 +1,14 @@
 {
   "prs": [
     {
+      "repo": "internetarchive/openlibrary",
+      "number": 14602,
+      "title": "Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412)",
+      "url": "https://github.com/internetarchive/openlibrary/pull/14602",
+      "state": "approved",
+      "date": "2026-11-19"
+    },
+    {
       "repo": "firebase/firebase-tools",
       "number": 11509,
       "title": "fix(firestore): do not create a missing database on deploy --dry-run",
