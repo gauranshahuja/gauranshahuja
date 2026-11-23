@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://gauranshportfolio.web.app"><img src="assets/link-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
   <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="assets/link-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
+  <a href="https://codepen.io/gauransh3637"><img src="assets/link-codepen.svg" height="40" alt="CodePen"></a>&nbsp;
   <a href="mailto:gauransh3637ahuja@gmail.com"><img src="assets/link-email.svg" height="40" alt="Email"></a>
 </p>
 
@@ -128,6 +129,7 @@ Open to software engineering roles. [gauransh3637ahuja@gmail.com](mailto:gaurans
 <p>
   <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://leetcode.com/u/GauranshAhuja/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
+  <a href="https://codepen.io/gauransh3637"><img src="https://img.shields.io/badge/CodePen-000000?style=for-the-badge&logo=codepen&logoColor=white" alt="CodePen"/></a>
   <a href="https://gauranshportfolio.web.app"><img src="https://img.shields.io/badge/Portfolio-FF7531?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/></a>
   <a href="mailto:gauransh3637ahuja@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
@@ -316,6 +318,7 @@ I’m open to **full-stack / software engineering opportunities**. Building thin
 <a href="https://gauranshportfolio.web.app"><img src="https://img.shields.io/badge/Portfolio-FF7531?style=for-the-badge&logo=firefox&logoColor=white"/></a>
 <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="https://leetcode.com/u/GauranshAhuja/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a>
+<a href="https://codepen.io/gauransh3637"><img src="https://img.shields.io/badge/CodePen-000000?style=for-the-badge&logo=codepen&logoColor=white"/></a>
 <a href="mailto:gauransh3637ahuja@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
 <sub>⭐ Thanks for visiting — feel free to explore my repos!</sub>
@@ -335,6 +338,7 @@ I’m open to **full-stack / software engineering opportunities**. Building thin
 <p align="center">
   <a href="https://gauranshportfolio.web.app"><img src="assets/m-link-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
   <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="assets/m-link-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
+  <a href="https://codepen.io/gauransh3637"><img src="assets/m-link-codepen.svg" height="40" alt="CodePen"></a>&nbsp;
   <a href="mailto:gauransh3637ahuja@gmail.com"><img src="assets/m-link-email.svg" height="40" alt="Email"></a>
 </p>
 

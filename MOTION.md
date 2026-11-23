@@ -9,6 +9,7 @@
 <p align="center">
   <a href="https://gauranshportfolio.web.app"><img src="assets/m-link-portfolio.svg" height="40" alt="Portfolio"></a>&nbsp;
   <a href="https://www.linkedin.com/in/gauransh-ahuja-000573261"><img src="assets/m-link-linkedin.svg" height="40" alt="LinkedIn"></a>&nbsp;
+  <a href="https://codepen.io/gauransh3637"><img src="assets/m-link-codepen.svg" height="40" alt="CodePen"></a>&nbsp;
   <a href="mailto:gauransh3637ahuja@gmail.com"><img src="assets/m-link-email.svg" height="40" alt="Email"></a>
 </p>
 

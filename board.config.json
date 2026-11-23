@@ -21,6 +21,7 @@
   "links": [
     { "id": "portfolio", "label": "PORTFOLIO" },
     { "id": "linkedin", "label": "LINKEDIN" },
+    { "id": "codepen", "label": "CODEPEN" },
     { "id": "email", "label": "EMAIL" }
   ],
   "exclude": ["KeshavMothwal/am-azon"],
