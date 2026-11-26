@@ -1,6 +1,14 @@
 {
   "prs": [
     {
+      "repo": "mozilla/addons-frontend",
+      "number": 14645,
+      "title": "Let the header search box use the free space from 500px up",
+      "url": "https://github.com/mozilla/addons-frontend/pull/14645",
+      "state": "open",
+      "date": "2026-11-25"
+    },
+    {
       "repo": "internetarchive/openlibrary",
       "number": 14602,
       "title": "Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412)",

@@ -3,7 +3,7 @@
 <!-- board:switch:end -->
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
+<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 8 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
@@ -24,10 +24,10 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 ## Arrivals: code merged upstream
 
 <!-- board:arrivals:start -->
-<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
+<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 8 in review. The full list is below."></p>
 
 <details>
-<summary><b>All 15 merged pull requests</b>, with links · 7 more in review</summary>
+<summary><b>All 15 merged pull requests</b>, with links · 8 more in review</summary>
 <br>
 
 **Open Library · Internet Archive** — 7 merged
@@ -65,6 +65,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 
 **In review**
 
+- [mozilla/addons-frontend #14645](https://github.com/mozilla/addons-frontend/pull/14645) Let the header search box use the free space from 500px up
 - [internetarchive/openlibrary #14602](https://github.com/internetarchive/openlibrary/pull/14602) Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412) · <sub>approved</sub>
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
 - [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV · <sub>approved</sub>

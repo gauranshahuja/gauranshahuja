@@ -5,7 +5,7 @@
 <br>
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
+<p align="center"><img src="assets/hero.svg" width="100%" alt="GAURANSH AHUJA — SOFTWARE DEVELOPER. 15 pull requests merged upstream across 6 open-source organisations, 8 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
@@ -26,10 +26,10 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 ## Arrivals: code merged upstream
 
 <!-- board:arrivals:start -->
-<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
+<p align="center"><img src="assets/arrivals.svg" width="100%" alt="Arrivals board: 15 pull requests merged into upstream repositories, 8 in review. The full list is below."></p>
 
 <details>
-<summary><b>All 15 merged pull requests</b>, with links · 7 more in review</summary>
+<summary><b>All 15 merged pull requests</b>, with links · 8 more in review</summary>
 <br>
 
 **Open Library · Internet Archive** — 7 merged
@@ -67,6 +67,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 
 **In review**
 
+- [mozilla/addons-frontend #14645](https://github.com/mozilla/addons-frontend/pull/14645) Let the header search box use the free space from 500px up
 - [internetarchive/openlibrary #14602](https://github.com/internetarchive/openlibrary/pull/14602) Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412) · <sub>approved</sub>
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
 - [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV · <sub>approved</sub>
@@ -304,7 +305,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#14602](https://github.com/internetarchive/openlibrary/pull/14602) in [internetarchive/openlibrary](https://github.com/internetarchive/openlibrary)
+1. 💪 Opened PR [#14645](https://github.com/mozilla/addons-frontend/pull/14645) in [mozilla/addons-frontend](https://github.com/mozilla/addons-frontend)
 <!--END_SECTION:activity-->
 
 ---
@@ -332,7 +333,7 @@ I’m open to **full-stack / software engineering opportunities**. Building thin
 <br>
 
 <!-- board:hero:start -->
-<p align="center"><img src="assets/m-hero.svg" width="100%" alt="GAURANSH AHUJA. I BUILD SOFTWARE THAT SHIPS. 15 PRS MERGED UPSTREAM. OPEN TO SOFTWARE ROLES. 15 pull requests merged upstream across 6 open-source organisations, 7 in review."></p>
+<p align="center"><img src="assets/m-hero.svg" width="100%" alt="GAURANSH AHUJA. I BUILD SOFTWARE THAT SHIPS. 15 PRS MERGED UPSTREAM. OPEN TO SOFTWARE ROLES. 15 pull requests merged upstream across 6 open-source organisations, 8 in review."></p>
 <!-- board:hero:end -->
 
 <p align="center">
@@ -353,10 +354,10 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 ## Merged upstream
 
 <!-- board:log:start -->
-<p align="center"><img src="assets/m-log.svg" width="100%" alt="Merge log: 15 pull requests merged into upstream repositories, 7 in review. The full list is below."></p>
+<p align="center"><img src="assets/m-log.svg" width="100%" alt="Merge log: 15 pull requests merged into upstream repositories, 8 in review. The full list is below."></p>
 
 <details>
-<summary><b>All 15 merged pull requests</b>, with links · 7 more in review</summary>
+<summary><b>All 15 merged pull requests</b>, with links · 8 more in review</summary>
 <br>
 
 **Open Library · Internet Archive** — 7 merged
@@ -394,6 +395,7 @@ Software Developer at Nova Web Innovations, shipping full-stack JavaScript on Go
 
 **In review**
 
+- [mozilla/addons-frontend #14645](https://github.com/mozilla/addons-frontend/pull/14645) Let the header search box use the free space from 500px up
 - [internetarchive/openlibrary #14602](https://github.com/internetarchive/openlibrary/pull/14602) Enable ruff DTZ002, DTZ006 and DTZ011 (second wave for #13412) · <sub>approved</sub>
 - [aws/aws-cdk #39752](https://github.com/aws/aws-cdk/pull/39752) feat(ec2): support IPv6 IPAM allocation for Subnet
 - [internetarchive/openlibrary #14367](https://github.com/internetarchive/openlibrary/pull/14367) Summarize failed Goodreads imports and let patrons download them as CSV · <sub>approved</sub>
@@ -415,17 +417,19 @@ Selected work:
 ## Contributions
 
 <!-- board:contrib:start -->
-<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,229 contributions in the last 12 months: 264 active days, longest streak 194 days (15 MAY to 24 NOV), current streak 194 days, busiest day 37 on 23 JUN 2026, 24 pull requests opened."></p>
+<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,239 contributions in the last 12 months: 266 active days, longest streak 196 days (15 MAY to 26 NOV), current streak 196 days, busiest day 37 on 23 JUN 2026, 25 pull requests opened."></p>
 
 <details>
 <summary><b>Day by day</b>: what each square on the chart was</summary>
 <br>
 
 <details open>
-<summary>November 2026 · 24 active days · 63 contributions</summary>
+<summary>November 2026 · 26 active days · 73 contributions</summary>
 
 | Day | Count | What |
 |---|--:|---|
+| Thu 26 Nov | 5 | no public details |
+| Wed 25 Nov | 5 | **leetcode-s_solutions**: Create README - LeetHub; Time: 15 ms (94.18%), Space: 67.6 MB (8.22%) - LeetHub; Update README - Topic Tags (+5 more)<br>opened PR mozilla/addons-frontend#14645: Let the header search box use the free space from 500px up |
 | Tue 24 Nov | 1 | no public details |
 | Mon 23 Nov | 3 | **leetcode-s_solutions**: Create README - LeetHub; Time: 9 ms (50.36%), Space: 74.7 MB (22.43%) - LeetHub; Update README - Topic Tags (+1 more)<br>**gauranshahuja**: feat: add a CodePen link to all three looks |
 | Sun 22 Nov | 4 | **leetcode-s_solutions**: Create README - LeetHub; Time: 0 ms (100%), Space: 62.7 MB (12.88%) - LeetHub; Update README - Topic Tags (+1 more) |
