@@ -185,7 +185,7 @@ Sharpening problem-solving daily — my solutions in C / C++ / Python, organized
 ### ⚡ Recent Activity
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#14602](https://github.com/internetarchive/openlibrary/pull/14602) in [internetarchive/openlibrary](https://github.com/internetarchive/openlibrary)
+1. 💪 Opened PR [#14645](https://github.com/mozilla/addons-frontend/pull/14645) in [mozilla/addons-frontend](https://github.com/mozilla/addons-frontend)
 <!--END_SECTION:activity-->
 
 ---
