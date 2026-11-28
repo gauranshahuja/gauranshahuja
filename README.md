@@ -417,7 +417,7 @@ Selected work:
 ## Contributions
 
 <!-- board:contrib:start -->
-<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,239 contributions in the last 12 months: 266 active days, longest streak 196 days (15 MAY to 26 NOV), current streak 196 days, busiest day 37 on 23 JUN 2026, 25 pull requests opened."></p>
+<p align="center"><img src="assets/m-contrib.svg" width="100%" alt="1,239 contributions in the last 12 months: 266 active days, longest streak 196 days (15 MAY to 26 NOV), busiest day 37 on 23 JUN 2026, 25 pull requests opened."></p>
 
 <details>
 <summary><b>Day by day</b>: what each square on the chart was</summary>
